@@ -1,146 +1,174 @@
- /* Add a background image or color */
-    body {
-      background-image: url(Happy.jpg);
-      background-size: 120%;
-      background-color: #e27474;
-    }
-    
-    /* Add some basic styling */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-   
-    
-    h1, h2 {
-      font-family: Arial, sans-serif;
-      color: rgb(14, 21, 78);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10vh; /* adjust the height value as needed */
-      margin: 0; /* remove any default margin */
-
-    }
-
-    .head{
-      display: flexbox;
-      justify-content: center;
-      margin-top: 250px;
-    }
-    p {
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      color:rgb(4, 7, 31);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 9vh; /* adjust the height value as needed */
-      margin: 30px; /* remove any default margin */
-    }
-    .center{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40vh; /* adjust the height value as needed */
-      margin: 50px; /* remove any default margin */
-      padding: 0px;
-      overflow: hidden;
-      border-radius: 10px;
-      
-    }
-     .center img{
-      width: 25%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.4s;
-      cursor: pointer;
-      border-radius: 10px;
-     }
-    .center img:hover {
-      opacity: 0.3;
-    }
-    /* Style the slideshow */
-    #slideshow {
-      width: 500px;
-      height: 500px;
-      overflow: hidden;
-    }
-    
-    #slideshow img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.4s;
-    }
-    
-    #slideshow img:hover {
-      opacity: 0.5;
-    }
-
-    #slideshow {
-      margin: 0 auto; /* center the slideshow horizontally */
-      text-align: center; /* center the slideshow content horizontally */
- }
-    
-    
-    
-    /* Style the interactive element */
-    #wish {
-      width: 100%;
-      padding: 10px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* Customize the buttons */
-    button[type="submit"] {
-      background-color: #fc1919; /* Pink color */
-      color: #fff;
-      padding: 50px 20px;
-      border: rgb(116, 194, 230);
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10vh; /* adjust the height value as needed */
-      margin-left: 100vh; /* remove any default margin */
-    }
-    
-    button[type="submit"]:hover {
-      transition: 0.3s;
-     border-radius: 10px;
-     color: #ce1059;
-     background-color: rgb(14, 11, 11);
-      
-    }
-     .button{
-      background-color: #010630; /* Pink color */
-      color: #fff;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border: brown;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10vh; /* adjust the height value as needed */
-      margin-left: 100vh; /* remove any default margin */
-    }
-     #wishes {
-      padding: 20px;
-    }
-    
-    #wishes p {
-      margin-bottom: 10px;
+/* Add a background image or color */
+body {
+    background-image: url(Happy.jpg);
+    background-size: cover; /* Ensure the background covers the entire viewport */
+    background-position: center;
+    background-color: #e27474; /* Fallback color */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Global box sizing and reset margins/padding */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Heading styles */
+  h1, h2 {
+    font-family: Arial, sans-serif;
+    color: rgb(14, 21, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Make flexible */
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  /* Center heading section */
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Paragraph styles */
+  p {
+    font-size: 18px;
+    color: rgb(4, 7, 31);
+    text-align: center;
+    margin: 30px auto;
+    padding: 0 20px;
+    max-width: 80%; /* Limit paragraph width */
+  }
+  
+  /* Center container */
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    margin: 50px auto;
+    padding: 0;
+    border-radius: 10px;
+  }
+  
+  /* Center image styling */
+  .center img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .center img:hover {
+    opacity: 0.7;
+  }
+  
+  /* Slideshow container */
+  #slideshow {
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  
+  #slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s;
+  }
+  
+  #slideshow img:hover {
+    opacity: 0.7;
+  }
+  
+  /* Form button styles */
+  button[type="submit"],
+  .button {
+    background-color: #010630;
+    color: #fff;
+    padding: 15px 40px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  button[type="submit"]:hover,
+  .button:hover {
+    transition: 0.3s;
+    background-color: rgb(14, 11, 11);
+    color: #ce1059;
+  }
+  
+  #wish, #wishes {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #wishes p {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    /* Reduce image and button sizes on tablets and smaller devices */
+    .center img {
+      width: 50%; /* Make images bigger on smaller screens */
     }
   
+    #slideshow {
+      width: 100%;
+      height: auto;
+    }
+  
+    button[type="submit"], .button {
+      padding: 10px 30px;
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Adjust for mobile screens */
+    .center img {
+      width: 80%; /* Full width on small screens */
+    }
+  
+    h1, h2 {
+      font-size: 4vw; /* Adjust heading sizes */
+    }
+  
+    p {
+      font-size: 14px;
+      max-width: 90%;
+    }
+  
+    button[type="submit"], .button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
